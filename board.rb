@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-require"./cell.rb"
+require './cell.rb'
 require 'matrix'
 # Class for the life grid
 class Board
