@@ -1,16 +1,17 @@
-class Cell 
+# frozen_string_literal: true
+
+# class for representing the cellular organism
+class Cell
   attr_accessor(:stage, :neighbours)
-  
-  def initialize(stage, neighbours)
-    @stage = stage 
+
+  def initialize(stage)
+    @stage = stage
     @neighbours = neighbours
 
     @live = false
   end
-  
-  def position_cell(cell)
-    
-  end
+
+  def position_cell(cell); end
 
   def dead?
     !@live
@@ -24,19 +25,5 @@ class Cell
     @live
   end
 
-  def neighbours?
-    neighbours = []
-    neighbours.<<(@board.cell(self.x - 1, self.y - 1))
-    neighbours.<<(@board.cell(self.x - 1, self.y))
-    neighbours.<<(@board.cell(self.x - 1, self.y + 1))
 
-    neighbours.<<(@board.cell(self.x, self.y - 1))
-    neighbours.<<(@board.cell(self.x, self.y + 1))
-
-    neighbours.<<(@board.cell(self.x + 1, self.y - 1))
-    neighbours.<<(@board.cellt(self.x + 1, self.y))
-    neighbours.<<(@board.cell(self.x + 1, self.y + 1))
-
-    neighbours
-  end
 end
